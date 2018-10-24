@@ -9,7 +9,7 @@ export default class YouTubeDebugger extends React.Component{
       js { errors: [], user: null, settings: { bitrate: 8, video: { resolution: '1080p' } } }
     }
 
-    handleEvent = event => {
+    bitrate = () => {
       this.setState({
         timesClicked++
       })
@@ -18,7 +18,7 @@ export default class YouTubeDebugger extends React.Component{
 
   render(){
     return(
-      <button className="Bitrate" onClick={this.handleEvent}>{this.state.timesClicked}</button>
+      <button className="bitrate" onClick={this.bitrate}></button>
     )
   }
 }
