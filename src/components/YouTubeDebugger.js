@@ -25,6 +25,16 @@ export default class YouTubeDebugger extends React.Component{
     })
   }
 
+  resolution = () => {
+    this.setState({
+      settings : Object.assign({}, this.state.settings, {
+        video : Object.assign({}, this.state.settings.video, {
+          resolution : '720p'
+        })
+      }),
+    })
+  }
+
   render(){
     return(
       <button className="bitrate" onClick={this.bitrate}>Bitrate</button>
