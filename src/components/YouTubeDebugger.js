@@ -14,16 +14,14 @@ export default class YouTubeDebugger extends React.Component{
            resolution: '1080p'
          }
        }
-    }
+    };
   }
-  
+
   bitrate = () => {
     this.setState({
-      settings: {
-        ...this.state.settings,
-        bitrate: 12,
-        ...this.state.settings.video
-      }
+      settings : Object.assign({}, this.state.settings, {
+        bitrate : 12
+      }),
     })
   }
 
